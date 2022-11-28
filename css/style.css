@@ -1,0 +1,81 @@
+.body-wrap {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+}
+
+.container {
+    width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    background: rgba(94, 93, 88, 0.6);
+    padding-top: 26px;
+    padding-bottom: 26px;
+    /*position: absolute;*/
+    /*display: flex;*/
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 32px;
+    line-height: 48px;
+    color: #FFFFFF;
+}
+
+.logo-link::before {
+    content: url("../images/polygon.png");
+    width: 58px;
+    height: 67px;
+    margin-right: 6px;
+}
+
+.logo-icon {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 31px;
+    color: #FFFFFF;
+    position: absolute;
+    padding-left: 13px;
+}
+
+.logo-text {
+    color: #18CFAB;
+    font-weight: 700;
+}
+
+.menu-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    gap: 21px;
+}
+
+.menu-item-link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.menu-item-link:hover {
+    color: #18CFAB;
+    cursor: pointer;
+}
+
+/*TODO: add search-icon hover*/
+
+
+
