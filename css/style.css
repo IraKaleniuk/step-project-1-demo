@@ -1,6 +1,8 @@
 .body-wrap {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
+    color: #FFFFFF;
+    /*position: relative;*/
 }
 
 .container {
@@ -13,8 +15,8 @@
     background: rgba(94, 93, 88, 0.6);
     padding-top: 26px;
     padding-bottom: 26px;
-    /*position: absolute;*/
-    /*display: flex;*/
+    position: absolute;
+    width: 100%;
 }
 
 .navbar {
@@ -49,8 +51,11 @@
 }
 
 .logo-text {
-    color: #18CFAB;
     font-weight: 700;
+}
+
+.accent-color-green {
+    color: #18CFAB;
 }
 
 .menu-list {
@@ -77,5 +82,107 @@
 
 /*TODO: add search-icon hover*/
 
+/*Intro section*/
 
+.intro {
+    padding-top: 120px;
+    /*padding-bottom: 10px;*/
+    background-image: url("../images/sections-background/section-1(header).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.intro-title {
+    margin-top: 0;
+    margin-bottom: 22px;
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.intro-subtitle {
+    display: block;
+    font-weight: 700;
+    font-size: 78px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.intro-cta {
+    font-size: 34px;
+    display: block;
+    margin-top: 22px;
+    margin-bottom: 130px;
+    text-align: center;
+    color: #D4D4D4;
+}
+
+.btn-wrap {
+    text-align: center;
+}
+
+.btn-link {
+    padding: 16px 12px;
+    border-top: #FFFFFF solid 5px ;
+    border-radius: 3px;
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 32px;
+    text-transform: uppercase;
+    margin-right: 26px;
+}
+
+.green-btn {
+    background: #18CFAB;
+}
+
+.blue-btn {
+    background: #00CBF6;
+}
+
+/*4 options section*/
+
+.options {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.option-list {
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    background: #1C2A33;
+}
+
+.option-list-item {
+    padding: 87px 50px 103px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #18CFAB;
+}
+
+.option-list-item:nth-child(2n) {
+    background: #18CFAB;
+    color: #FFFFFF;
+}
+
+.option-icon {
+    margin-bottom: 48px;
+    height: 97px;
+    object-fit: contain;
+}
 
