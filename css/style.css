@@ -279,3 +279,31 @@
   line-height: 24px;
   color: #777777;
 }
+
+/*Purchase-section*/
+.purchase {
+  padding-top: 127px;
+  padding-bottom: 127px;
+  background:linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/sections-background/section-2.jpg");
+  background-size: cover;
+  background-position-y: center;
+  text-align: center;
+}
+
+.purchase-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.purchase-subtitle {
+  margin-top: 12px;
+  margin-bottom: 62px;
+  display: block;
+  font-size: 16px;
+  line-height: 40px;
+  color: #D8D8D8;
+}
