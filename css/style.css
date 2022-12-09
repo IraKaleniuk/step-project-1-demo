@@ -558,7 +558,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 38px;
+    margin-bottom: 28px;
 }
 
 .user-name {
@@ -579,13 +579,12 @@
 }
 
 .user-img {
-    padding: 5px;
+    box-sizing: content-box;
+    padding: 12px;
+    width: 143px;
+    height: 143px;
     background: rgba(31, 218, 181, 0.2);
     border-radius: 50%;
-}
-
-.user-active {
-    padding: 12px;
 }
 
 .user-list-wrap {
@@ -605,10 +604,27 @@
     gap: 27px;
 }
 
+
 /*TODO: set when user is active*/
 
+.user-list-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.user-list-img {
+    box-sizing: content-box;
+    padding: 5px;
+    width: 60px;
+    height: 60px;
+    background: rgba(31, 218, 181, 0.2);
+    border-radius: 50%;
+}
+
 .user-item-active {
-    /*margin-bottom: 10px;*/
+    padding-top: 0;
+    padding-bottom: 20px;
 }
 
 .left-arrow-icon,
