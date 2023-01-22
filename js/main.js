@@ -42,30 +42,39 @@ workCategoryList.addEventListener("click", (e)=> {
 let counter = 1;
 
 const loadMore = document.querySelector(".load-more-btn");
+const loader = document.querySelector(".loader");
 const workGalleryItems = document.querySelectorAll(".work-gallery-item");
 
 loadMore.addEventListener("click", (e) => {
   const newItems = [];
 
-  Array.from(workGalleryItems).forEach((work) => {
-    const clone = work.cloneNode(true);
-    let itemImg = clone.querySelector(".gallery-item-img");
-    let src = itemImg.src;
-    let str = src.split("-");
-    let num = +str[str.length - 1].split(".")[0];
-    (counter === 1) ? num += 3 : num += 6;
-    itemImg.src = src.split(".j")[0].slice(0,-1) + num + ".jpg";
-    newItems.push(clone);
-  })
+  loadMore.style.display = "none";
+  loader.style.display = "inline-block";
 
-  console.log(newItems);
+  setTimeout(() => {
+    loadMore.style.display = "inline-block";
+    loader.style.display = "none";
 
-  document.querySelector(".work-gallery").append(...newItems);
+    Array.from(workGalleryItems).forEach((work) => {
+      const clone = work.cloneNode(true);
+      let itemImg = clone.querySelector(".gallery-item-img");
 
-  counter++;
-  if(counter === 3) {
-    loadMore.style.display = "none";
-  }
+      let src = itemImg.src;
+      let str = src.split("-");
+      let num = +str[str.length - 1].split(".")[0];
+      (counter === 1) ? num += 3 : num += 6;
+      itemImg.src = src.split(".j")[0].slice(0,-1) + num + ".jpg";
+
+      newItems.push(clone);
+    })
+
+    document.querySelector(".work-gallery").append(...newItems);
+
+    counter++;
+    if(counter === 3) {
+      loadMore.style.display = "none";
+    }
+  }, 2000)
 })
 
 
