@@ -691,30 +691,34 @@
     padding-left: 0;
     display: flex;
     justify-content: center;
-    gap: 27px;
+    gap: 25px;
+
+    /*height: 90px;*/
+
 }
 
 
 /*TODO: set when user is active*/
 
 .user-list-item {
-    padding-top: 10px;
-    padding-bottom: 10px;
     position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 80px;
+    /*padding-bottom: 10px;*/
 }
 
 .user-list-img {
     box-sizing: content-box;
     padding: 5px;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background: rgba(31, 218, 181, 0.2);
     border-radius: 50%;
 }
 
 .user-item-active {
-    padding-top: 0;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .left-arrow-icon,
