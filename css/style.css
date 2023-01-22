@@ -729,3 +729,16 @@
     border: 1px solid #18cfab;
     background: #18cfab;
 }
+
+
+/*footer*/
+.footer {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 26px;
+    color: #AEAEAE;
+    background: #22353F;
+}
