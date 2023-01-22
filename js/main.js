@@ -21,7 +21,7 @@ serviceList.addEventListener("click", (e) => {
 //work
 const workCategoryList = document.querySelector(".work-category-list");
 
-workCategoryList.addEventListener("click", (e)=> {
+workCategoryList.addEventListener("click", (e) => {
   const active = workCategoryList.querySelector(".active-category");
   active.classList.remove("active-category");
   e.target.classList.add("active-category");
@@ -29,15 +29,15 @@ workCategoryList.addEventListener("click", (e)=> {
 
   const workGalleryItems = document.querySelectorAll(".work-gallery-item");
   Array.from(workGalleryItems).forEach((work) => {
-    if(e.target.dataset.category === "all") {
+    if (e.target.dataset.category === "all") {
       work.style.display = "block";
-    } else if(work.dataset.category === e.target.dataset.category) {
+    } else if (work.dataset.category === e.target.dataset.category) {
       work.style.display = "block";
     } else {
       work.style.display = "none";
     }
-  })
-})
+  });
+});
 
 let counter = 1;
 
@@ -63,20 +63,57 @@ loadMore.addEventListener("click", (e) => {
       let str = src.split("-");
       let num = +str[str.length - 1].split(".")[0];
       (counter === 1) ? num += 3 : num += 6;
-      itemImg.src = src.split(".j")[0].slice(0,-1) + num + ".jpg";
+      itemImg.src = src.split(".j")[0].slice(0, -1) + num + ".jpg";
 
       newItems.push(clone);
-    })
+    });
 
     document.querySelector(".work-gallery").append(...newItems);
 
     counter++;
-    if(counter === 3) {
+    if (counter === 3) {
       loadMore.style.display = "none";
     }
-  }, 2000)
-})
+  }, 2000);
+});
 
+const userList = document.querySelector(".user-list-wrap");
+const userListItems = Array.from(document.querySelectorAll(".user-list-item"));
+const userFeedbacks = Array.from(document.querySelectorAll(".user-feedback"));
+
+let activeItem = document.querySelector(".user-item-active");
+userFeedbacks.filter((el) => el.dataset.user === activeItem.dataset.user)[0].style.display = "flex";
+
+function ShowFeedback(index) {
+  userListItems[index].classList.add("user-item-active");
+  userFeedbacks.forEach((feedback) => {
+    if(feedback.dataset.user === userListItems[index].dataset.user) {
+      feedback.style.display = "flex";
+    } else {
+      feedback.style.display = "none";
+    }
+  })
+}
+
+userList.addEventListener("click", (e) => {
+  let activeItem = document.querySelector(".user-item-active");
+  activeItem.classList.remove("user-item-active");
+
+  let activeIndex = userListItems.indexOf(activeItem);
+  const listItem = e.target.parentElement;
+
+  if (listItem.classList.contains("user-list-item")) {
+    activeIndex = userListItems.indexOf(listItem);
+  } else if(e.target.classList.contains("right-arrow-icon")) {
+    activeIndex === userListItems.length - 1
+      ? activeIndex = 0 : activeIndex++;
+  } else if(e.target.classList.contains("left-arrow-icon")) {
+    activeIndex === 0
+      ? activeIndex = userListItems.length - 1 : activeIndex--;
+  }
+
+  ShowFeedback(activeIndex);
+});
 
 
 

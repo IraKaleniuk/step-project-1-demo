@@ -553,8 +553,6 @@
     gap: 43px 35px;
 }
 
-/*TODO: wrap news-list-item in link <a>*/
-
 .news-list-item {
     text-align: left;
     position: relative;
@@ -626,29 +624,28 @@
 }
 
 .user-feedback {
+    display: none;
+    flex-direction: column;
+    align-items: center;
     margin-top: 135px;
+    margin-bottom: 28px;
+}
+
+
+.feedback-text {
     margin-bottom: 37px;
     display: block;
     font-weight: 300;
     font-size: 16px;
     line-height: 30px;
     color: #BBBBBB;
-
 }
 
-
-.user-feedback::before {
+.feedback-text::before {
     content: url("../images/quotes-icon.svg");
     position: absolute;
     top: 235px;
     left: 49%;
-}
-
-.user-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 28px;
 }
 
 .user-name {
@@ -692,20 +689,13 @@
     display: flex;
     justify-content: center;
     gap: 25px;
-
-    /*height: 90px;*/
-
 }
-
-
-/*TODO: set when user is active*/
 
 .user-list-item {
     position: relative;
     display: flex;
     align-items: flex-end;
     height: 80px;
-    /*padding-bottom: 10px;*/
 }
 
 .user-list-img {
