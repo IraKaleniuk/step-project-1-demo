@@ -64,7 +64,7 @@ loadMore.addEventListener("click", (e) => {
 
   counter++;
   if(counter === 3) {
-    loadMore.remove();
+    loadMore.style.display = "none";
   }
 })
 

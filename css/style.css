@@ -85,8 +85,6 @@
 }
 
 
-/*TODO: add search-icon hover*/
-
 /*Intro section*/
 
 .intro {
@@ -362,7 +360,7 @@
 
 .work-gallery-item {
     position: relative;
-    max-height: 207px;
+    height: 210px;
 }
 
 .work-gallery-item:hover .gallery-item-img {
