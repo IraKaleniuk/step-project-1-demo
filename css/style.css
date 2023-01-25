@@ -2,7 +2,6 @@
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     color: #ffffff;
-    /*position: relative;*/
 }
 
 .container {
@@ -89,13 +88,15 @@
 
 .intro {
     padding-top: 120px;
-    /*padding-bottom: 10px;*/
     background-image: url("../images/sections-background/section-1(header).jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
+
+    background-attachment: fixed;
+
 }
 
 .intro-title {
@@ -630,7 +631,6 @@
     margin-top: 135px;
     margin-bottom: 28px;
 }
-
 
 .feedback-text {
     margin-bottom: 37px;
