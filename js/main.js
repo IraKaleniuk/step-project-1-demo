@@ -1,5 +1,5 @@
 "use strict";
-
+/*---------- services-section ----------*/
 const serviceList = document.querySelector(".service-list");
 const servicesDesc = document.querySelectorAll(".service-desc");
 
@@ -18,6 +18,8 @@ serviceList.addEventListener("click", (e) => {
   service[0].dataset.active = "true";
 });
 
+
+/*---------- work-section ----------*/
 const workCategoryList = document.querySelector(".work-category-list");
 
 workCategoryList.addEventListener("click", (e) => {
@@ -76,6 +78,7 @@ loadMoreWorks.addEventListener("click", () => {
   }, 2000);
 });
 
+/*---------- feedback-section ----------*/
 const userList = document.querySelector(".user-list-wrap");
 const userListItems = Array.from(document.querySelectorAll(".user-list-item"));
 const userFeedbacks = Array.from(document.querySelectorAll(".user-feedback"));
@@ -111,9 +114,9 @@ userList.addEventListener("click", (e) => {
   ShowFeedback(activeIndex);
 });
 
+/*---------- best-images-section ----------*/
 const loadMoreImg = document.querySelector(".more-img-btn");
 const loaderImg = document.querySelector(".loader-img");
-
 
 $(".inner-grid--1x2").masonry({
   itemSelector: ".grid-item--1x2",
@@ -147,7 +150,7 @@ function getItemElement(i) {
   elem.className = "grid-item";
 
   const img = document.createElement("img");
-  img.src = `https://source.unsplash.com/random?sig=${i}`;
+  img.src = `https://picsum.photos/240?random=${i}`;
 
   const hoverDiv = document.createElement("div");
   hoverDiv.className = "grid-hover-block";
@@ -169,7 +172,7 @@ function getItemElement(i) {
   return elem;
 }
 
-
+let count = 1;
 loadMoreImg.addEventListener("click", () => {
   const newItems = [];
 
@@ -179,16 +182,16 @@ loadMoreImg.addEventListener("click", () => {
   setTimeout(() => {
     loadMoreImg.style.display = "inline-block";
     loaderImg.style.display = "none";
-    let i = counter === 1 ? 1 : 7;
-    for(i; i < 7 * counter; i++) {
+    let i = count === 1 ? 1 : 7;
+    for(i; i < 7 * count; i++) {
       const newEl = getItemElement(i);
       newItems.push(newEl);
     }
 
     addItemsToGallery(newItems);
 
-    counter++;
-    if (counter === 3) {
+    count++;
+    if (count === 3) {
       loadMoreImg.style.display = "none";
     }
   }, 2000);

@@ -10,6 +10,8 @@
     margin-right: auto;
 }
 
+/*---------- header--start ----------*/
+
 .header {
     background: rgba(94, 93, 88, 0.6);
     padding-top: 26px;
@@ -83,15 +85,20 @@
     cursor: pointer;
 }
 
+.menu-item-link > a{
+    color: #ffffff;
+}
+/*---------- header--end ----------*/
+
+
+/*---------- intro-section--start ----------*/
 .intro {
-    padding-top: 120px;
+    padding-top: 380px;
     background-image: url("../images/sections-background/section-1(header).jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 1012px;
     display: flex;
-    align-items: center;
-
     background-attachment: fixed;
 
 }
@@ -146,7 +153,9 @@
 .blue-btn {
     background: #00cbf6;
 }
+/*---------- intro-section--end ----------*/
 
+/*---------- options-section--start ----------*/
 .options {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -154,6 +163,8 @@
 
 .option-list {
     padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -184,7 +195,9 @@
     height: 97px;
     object-fit: contain;
 }
+/*---------- options-section--end ----------*/
 
+/*---------- services-section--start ----------*/
 .services {
     color: #4e4e4e;
     padding-top: 83px;
@@ -284,7 +297,9 @@
     line-height: 24px;
     color: #777777;
 }
+/*---------- services-section--end ----------*/
 
+/*---------- purchase-section--start ----------*/
 .purchase {
     padding-top: 127px;
     padding-bottom: 127px;
@@ -311,7 +326,9 @@
     line-height: 40px;
     color: #D8D8D8;
 }
+/*---------- purchase-section--end ----------*/
 
+/*---------- work-section--start ----------*/
 .work {
     color: #4e4e4e;
     text-align: center;
@@ -527,7 +544,9 @@
         margin-top: 0;
     }
 }
+/*---------- work-section--end ----------*/
 
+/*---------- news-section--start ----------*/
 .news {
     padding-top: 82px;
     padding-bottom: 130px;
@@ -601,7 +620,9 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+/*---------- news-section--end ----------*/
 
+/*---------- feedback-section--start ----------*/
 .feedback {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -731,7 +752,9 @@
     border: 1px solid #18cfab;
     background: #18cfab;
 }
+/*---------- feedback-section--end ----------*/
 
+/*---------- best-images-section--start ----------*/
 .best-images{
     color: #4E4E4E;
     text-align: center;
@@ -791,7 +814,7 @@
 .grid-item--1x2 img,
 .grid-item img {
     display: block;
-    max-width: 100%;
+    width: 100%;
 }
 
 .grid-item--3x3 img,
@@ -809,7 +832,9 @@
     height: 92px;
     margin-bottom: 3px;
 }
+/*---------- best-images-section--end ----------*/
 
+/*---------- footer--start ----------*/
 .footer {
     padding-top: 45px;
     padding-bottom: 45px;
@@ -820,3 +845,5 @@
     color: #AEAEAE;
     background: #22353F;
 }
+
+/*---------- footer--end ----------*/
